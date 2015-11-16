@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= title %> </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+</head>
+<body ng-app="urlOpener" ng-controller="myCtrl">
+	<!-- Heeader stats sere -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid" style="background-color:lavenderblush;">
+			<div class="navbar-header">
+				<a href="/" class="navbar-brand">Open Multiple Urls</a>
+			</div>
+			<div class="navbar-collapse collapse" >
+				<ul class="nav navbar-nav navbar-right">
+					<li><a class="active" href="/">Home</a></li>
+					<li><a href="/examples">Examples</a></li>
+					<li><a href="/about">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Header ends here -->
+
+	<!-- main container starts here -->
+	<div class="container">
+		<div class="row form-vertical">
+			<div class="col-sm-4 form-group">
+				<h3>Open Only Urls</h3> 
+				<button class="btn btn-default" ng-click="openUrls()" > Open Urls</button>
+				<br>
+				<h3>Concatenate and open</h3>
+				<button class="btn btn-default" ng-click="concat()">Concat and Open</button>
+			</div>
+			<div class="col-sm-8">
+				<div class="container-fluid form-vertical">
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label for="fragment1">First Fragment: </label>
+							<input ng-model="firstPtrn" type="text" id="fragment1" class="form-control">
+						</div>
+						<div class="col-sm-6 form-group">
+							<label for="fragment2">Second (If Any): </label>
+							<input ng-model="secondPtrn" type="text" id="fragment2" class="form-control"> <br>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 form-group">
+							<label for="">Paste Urls / Sku List: </label>
+							<textarea ng-model="textArea" class="form-control" name="" id="textAreaId" cols="0" rows="10"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- main container Ends -->
+	<div class="container">
+		<ol class="list-group">
+			<li class="list-group-item" ng-repeat="url in urlsArr">
+				<a href="{{url}}" target="_blank">{{url}}</a>
+			</li>
+		</ol>
+	</div>
+<!-- <footer>
+	<div class="container-fluid" style="margin:auto 120px;">
+		<p>Created by Manikandan</p>
+	</div>
+</footer>
+ -->
+ </body>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="
+anonymous"></script>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+<script src="/jscript/mainApp.js"></script>
+<script src="/jscript/controller/controller.js"></script>
+</html>
