@@ -7,8 +7,10 @@ angular
 			var b = $scope.textArea;
 			if(b){
 				b.split("\n").forEach(function(url, idx){
-					$window.open(url);
-					$scope.urlsArr.push(url);
+					url.split("\t").forEach(function(urlNew, indx){
+						$scope.urlsArr.push(urlNew);
+						$window.open(urlNew);
+					});
 				});
 			}
 		}
