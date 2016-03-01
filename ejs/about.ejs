@@ -1,12 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>About</title>
-</head>
-<body>
-	<div>
-		<h1>About Page</h1>
-	</div>
-</body>
-</html>
+<% include partials/header %>
+      <!-- main container starts here -->
+      <div id="content" class="contentStyle">
+        <h1>About Us</h1>
+        <p class="description">
+        	<a href="/">Url Opener</a> is free web app designed to help who wants to open multiple/bulk urls with single click. It also provides some additional features like UPC (Universal Product Code) Validation and Concatenate and Open the urls with list of search terms.
+        </p>
+        <p class="description">
+        This Application is designed by using latest Web Technology called "MEAN Stack" - <a href="https://en.wikipedia.org/wiki/MongoDB">Mongodb</a>, <a href="http://expressjs.com/">ExpressJs</a>, <a href="https://en.wikipedia.org/wiki/AngularJS">AngularJs</a> and <a href="https://en.wikipedia.org/wiki/Node.js">NodeJs</a>. 
+        </p>
+        <h2>Team</h2>
+        <ul> 
+          <li class="member">
+            <img src="./img/about/ganesan.jpg" width="80px" height="80px">
+            <p class="memberName">Ganesan</p>
+            <p class="memberRole">Business Analyst - He helped to analysis and plan the requirements.</p>
+            <hr>
+          </li>
+          <li class="member">
+            <img src="./img/about/mani.jpg" width="80px" height="80px">
+            <p class="memberName">Manikandan Perumal</p>
+            <p class="memberRole">Full Stack Developer - Designed, Developed and Maintaining this App.</p>
+            <hr>
+          </li>
+          <li class="member">
+            <img src="./img/about/temp.jpg" width="80px" height="80px">
+            <p class="memberName">Madhubala Palanivel</p>
+            <p class="memberRole">Real User - She tested and reported a lot of bugs.</p>        
+            <hr>
+          </li>
+        </ul>
+      </div>
+      <!-- main container Ends -->
+<% include partials/footer %>

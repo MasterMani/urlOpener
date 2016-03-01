@@ -1,0 +1,93 @@
+<% include partials/header %>
+      <!-- main container starts here -->
+      <div id="content">
+        <div class="container-fluid">
+          <div class="formsAndUrls">
+            <div class="row formsAndButtons">
+            	<div class="container">
+                <h2>Validate UPCs</h2>
+                <p>
+                  The Universal Product Code (UPC) is a barcode symbology (i.e., a specific type of barcode) that is widely used in the United States, Canada, the United Kingdom, Australia, New Zealand, and in other countries for tracking trade items in stores. <a href="https://en.wikipedia.org/wiki/Universal_Product_Code">Read More...</a> </p>
+
+                  <h4><b>UPC Checksum</b></h4>
+                  <p>The final digit of a Universal Product Code is a check digit computed as follows: <a href="https://en.wikipedia.org/wiki/Check_digit#UPC">Read More...</a></p>
+                  <ol>
+                    <li>Add the digits (up to but not including the check digit) in the odd-numbered positions (first, third, fifth, etc.) together and multiply by three.</li>
+                    <li>Add the digits (up to but not including the check digit) in the even-numbered positions (second, fourth, sixth, etc.) to the result.</li>
+                    <li>Take the remainder of the result divided by 10 (modulo operation) and subtract this from 10 to derive the check digit.</li>
+                  </ol>
+
+                <p>For instance, the UPC-A barcode for a box of tissues is "036000241457". The last digit is the check digit "7", and if the other numbers are correct then the check digit calculation must produce 7. </p>
+                <ol>
+                  <li>Add the odd number digits: 0+6+0+2+1+5 = 14</li>
+                  <li>Multiply the result by 3: 14 × 3 = 42</li>
+                  <li>Add the even number digits: 3+0+0+4+4 = 11</li>
+                  <li>Add the two results together: 42 + 11 = 53</li>
+                  <li>To calculate the check digit, take the remainder of (53 / 10), which is also known as (53 modulo 10), and subtract from 10. Therefore, the check digit value is 7.</li>
+                </ol>
+                <p>Another example: to calculate the check digit for the following food item "01010101010".</p>
+                <ol>
+                  <li>Add the odd number digits: 0+0+0+0+0+0 = 0</li>
+                  <li>Multiply the result by 3: 0 x 3 = 0</li>
+                  <li>Add the even number digits: 1+1+1+1+1 = 5</li>
+                  <li>Add the two results together: 0 + 5 = 5</li>
+                  <li>To calculate the check digit, take the remainder of (5 / 10), which is also known as (5 modulo 10), and subtract from 10 i.e. (10 - 5 modulo 10) = 5. Therefore, the check digit value is 5.</li>
+                  <li>If the remainder is 0, subtracting from 10 would give 10. In that case, use 0 as the check digit.</li>
+                </ol>
+              </div>
+              <!-- Left Column -->
+              <div class="col-sm-2"></div>
+              <!-- Left ends here -->
+              <div class="col-sm-8 centerContent">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="row">
+                      <div class="container-fluid">
+                        <div class="col-sm-12">
+                          <div class="form-vertical">
+                            <div class="form-group">
+                              <label for="">Paste UPC List: </label>
+                              <textarea ng-model="textArea" class="form-control" name="textAreaName" id="textAreaId" cols="0" rows="10"></textarea>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row buttonsRow" style="text-align:center">
+                      <div class="container-fluid">
+                        <button class="btn btn-primary" ng-click="upcCheck()" > Validate UPCs</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>                
+              </div>
+              <!-- Right Column -->
+              <div class="col-sm-2"></div>
+              <!-- Right ends here -->
+            </div>
+            <br>
+            <div class="container urlsArr">
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 ng-if="inValidUpcs.length > 0"> Invalid UPCs</h3>
+                   <ol class="list-group">
+                    <li class="list-group-item" ng-repeat="invalid in inValidUpcs track by $index">
+                    		{{invalid.replace("http://", "").replace(".com", "").trim()}}
+                    </li>
+                  </ol>
+                  <h3 ng-if="validUpcs.length > 0"> Valid UPCs</h3>
+                  <ol class="list-group">
+                    <li class="list-group-item" ng-repeat="upcs in validUpcs track by $index">
+                      <span ng-if='upcs.replace("http://", "").replace(".com", "").length >=10'>
+                    		{{upcs.replace("http://", "").replace(".com", "").trim()}}
+                    	</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main container Ends -->
+<% include partials/footer %>

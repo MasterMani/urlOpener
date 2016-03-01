@@ -1,14 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Eacmple</title>
-</head>
-<body>
-	<div>
-		<h1>Exampel Page</h1>
-	</div>
-</body>
-<script src="/jscript/mainApp.js"></script>
-<script src="/jscript/controller/controller.js"></script>
-</html>
+<% include partials/header %>
+      <!-- main container starts here -->
+      <div id="content" class="contentStyle examples row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <h2>Examples and Instructions</h2>
+            <h3 id="urlopener"> Open Multiple Urls</h3>
+            <h4>Steps</h4>
+            <ol>
+            	<li>Goto <a href="/">Url Opener </a></li>
+            	<li>Paste list of urls in the text area titled as "Paste Urls / UPC / Sku List"</li>
+            	<li>Click the button - "Open Urls"</li>
+            </ol>
+            <img src="/img/example/openurls.png" widht="500px" height="600px">
+            <p>Note: Do not open more than 10 urls per time. It will affect your internet bandwidth. <b>*Do it at your own risk*</b></p>
+            <br />
+            <h3 id="joinopen">Concatenate and Open urls</h3>
+            <h4>Steps</h4>
+            <ol>
+            	<li>Goto <a href="/">Url Opener </a></li>
+            	<li>Paste list of search terms in the text area titled as "Paste Urls / UPC / Sku List"</li>
+            	<li>Paste url start pattern in "First fragement" text box.</li>
+                <li>Paste url end pattern in "Second fragement" text box. (Optional)</li>
+            	<li>Click the button - "Concat and Open"</li>
+            </ol>
+            <img src="/img/example/concatandopen.png" widht="800px" height="600px">
+            <p>Note: Do not open more than 10 urls per time. It will affect your internet bandwidth. <b>*Do it at your own risk*</b></p>
+            <br />
+
+            <h3 id="onlyjoin">Only concatenate the search terms with url pattern</h3>
+            <h4>Steps</h4>
+            <ol>
+                <li>Goto <a href="/">Url Opener</a></li>
+                <li>Paste list of search terms in the text area titled as "Paste Urls / UPC / Sku List"</li>
+                <li>Paste url start pattern in "First fragement" text box.</li>
+                <li>Paste url end pattern in "Second fragement" text box. (Optional)</li>
+                <li>Click the button - "Only Concat"</li>
+            </ol>
+            <img src="/img/example/onlyconcat.png" widht="800px" height="600px">
+            <br />
+
+            <h3 id="validateUpcs">Upc Validator</h3>
+            <h4>Steps</h4>
+            <ol>
+                <li>Goto <a href="/upcvalidator">Upc Validator</a></li>
+                <li>Paste list of UPCs in the text area titled as "Paste UPCs"</li>
+                <li>Then click the button - "Validate UPCs"</li>
+            </ol>
+            <img src="/img/example/upcvalidate.png" widht="800px" height="600px">
+            <br />
+
+            <h3 id="upcandopen">Validate UPC and Open Urls</h3>
+            <h4>Steps</h4>
+            <ol>
+                <li>Goto <a href="/">Url Opener</a></li>
+                <li>Paste list of UPCs in the text area titled as "Paste Urls / UPC / Sku List"</li>
+                <li>Paste url start pattern in "First fragement" text box.</li>
+                <li>Paste url end pattern in "Second fragement" text box. (Optional)</li>
+                <li>Then click the button - "Check UPC and Open"</li>
+            </ol>
+            <img src="/img/example/openwithupc.png" widht="800px" height="600px">
+            <br />
+        </div>
+        <div class="col-sm-1"></div>
+      </div>
+<% include partials/footer %>

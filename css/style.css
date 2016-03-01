@@ -1,0 +1,159 @@
+
+/*Below code is to keep footer at the bottom of the page*/
+html, body{
+	margin :0;
+	padding: 0;
+	height: 100%;
+}
+#wrapper{
+	min-height: 100%;
+	position: relative;
+}
+#content{
+	padding-bottom: 71px;
+}
+#footer{
+	width: 100%;
+	height:71px;
+	position:absolute;
+	bottom: 0px;
+	left:0;
+}
+/*<><><>END<><>*/
+
+body{
+	background-color: #021a24;
+	/*background: url(../img/bg.jpg) no-repeat;
+	background-size: cover;
+	background-attachment: fixed;*/
+}
+
+.navbar-custom {
+	background: url(../img/top-bg.jpg) repeat;
+	/*background-size: cover;*/
+}
+
+.navbar.navbar-custom{
+	margin: 0px;
+}
+.titleBar .navbar-brand{
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+.titleBar .navbar-brand:hover{
+	color: #ccdedb;
+}
+.navbar-nav a{
+	color : #fff;
+}
+.navbar-nav a:hover{
+	color : #202020;
+}
+
+.formsAndButtons{
+	padding: 25px 0px 25px 0px;
+	color:#eee;
+	/*color:#d3d3d3;*/
+	min-height: 100%;
+	min-width: 100%;
+	font-size: 18px;
+}
+.formsAndButtons h2{
+	text-align: center;
+}
+
+.centerContent{
+	padding: 25px;
+	background-color: rgba(200,200,200,0.3);
+	border-radius: 5px;
+	box-shadow: ;
+}
+.contentStyle > h1, .contentStyle > h2{
+	text-decoration: underline;
+}
+.contentStyle > h1, .contentStyle > h3, .contentStyle > h2{
+	font-weight: bold;
+}
+
+.contentStyle{
+	margin: 50%;
+	/*background: #234453;*/
+	padding: 10px;
+	width : 75%;
+	margin: auto;
+	margin-top: 5em;
+	text-align: justify;
+	color:#eee;
+}
+.examples{
+	margin-top: 1em;
+}
+
+.examples h2{
+	text-align: center;
+	text-decoration: none;
+}
+.examples h3{
+	text-decoration: underline;
+}
+.contentStyle > p.description{
+	font-size: 18px;
+}
+
+.contentStyle .memberName{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.contentStyle ul{
+	list-style: none;
+}
+.contentStyle ul li p{
+	margin-left: auto;
+}
+
+.contentStyle ul li > img{
+	float:left;
+	margin-right: 15px;
+	border-radius: 50%
+}
+
+.urlsArr h3{
+	color : #eee;
+}
+
+#footer{
+	background-color: rgba(136, 136, 136, 0.93);
+}
+
+#footer ul{
+	margin-top: 10px;
+	text-align: center;
+}
+
+#footer ul li{
+	list-style: none;
+	display: inline;
+	margin-left: 15px;
+}
+#footer ul li a {
+	color : #eee;
+}
+#footer p {
+	font-size: 15px;
+	color : #aaa;
+	text-align: center;
+	/*margin-top: 15px;*/
+}
+
+
+
+/*Temporary styling*/
+
+.under-cons{
+	margin: auto;
+	margin-left: 40%;
+	font-weight: bold;
+	color: #ffffff;
+}
